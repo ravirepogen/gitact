@@ -12,6 +12,7 @@ jobs:
   # This workflow contains two jobs, this is Linux related job
   Linux_Job:
     # The type of runner that the job will run on
+    needs: [Windows_Job]
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -29,4 +30,4 @@ jobs:
     steps:
       # Runs a single command using the runners command prompt
       - name: Run a one-line script
-        run: Get-Service | Where-Object {$_.Status -eq 'Running'}
+        run: Get-Service
