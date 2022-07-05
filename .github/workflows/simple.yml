@@ -12,7 +12,7 @@ jobs:
   # This workflow contains two jobs, this is Linux related job
   Linux_Job:
     # The type of runner that the job will run on
-    #needs: [Windows_Job]
+    needs: [Windows_Job]
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
